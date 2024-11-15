@@ -1,3 +1,10 @@
+
+import java.awt.event.ItemEvent;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -25,22 +32,511 @@ public class BioKuis2_Leon extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        nikTxtField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        namaTxtField = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        alamatTxtField = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jLabel6 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jLabel7 = new javax.swing.JLabel();
+        txtTanggalLahir = new javax.swing.JFormattedTextField();
+        jLabel8 = new javax.swing.JLabel();
+        pendidikanComboBox = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        txtIPK = new javax.swing.JFormattedTextField();
+        jButton1 = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        tlpTxtField = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 255));
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Inter", 3, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel1.setText("Biodata");
+
+        jLabel2.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel2.setText("NIK");
+
+        nikTxtField.setBackground(new java.awt.Color(102, 102, 102));
+        nikTxtField.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        nikTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        nikTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nikTxtFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel3.setText("NAMA");
+
+        namaTxtField.setBackground(new java.awt.Color(102, 102, 102));
+        namaTxtField.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        namaTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        namaTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                namaTxtFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel4.setText("ALAMAT");
+
+        alamatTxtField.setBackground(new java.awt.Color(102, 102, 102));
+        alamatTxtField.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        alamatTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        alamatTxtField.setDisabledTextColor(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel5.setText("JENIS KELAMIN");
+
+        buttonGroup1.add(jRadioButton1);
+        jRadioButton1.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        jRadioButton1.setForeground(new java.awt.Color(0, 153, 255));
+        jRadioButton1.setText("Laki-laki");
+        jRadioButton1.setActionCommand("Laki-laki");
+
+        buttonGroup1.add(jRadioButton2);
+        jRadioButton2.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        jRadioButton2.setForeground(new java.awt.Color(0, 153, 255));
+        jRadioButton2.setText("Perempuan");
+        jRadioButton2.setActionCommand("Perempuan");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel6.setText("HOBBY");
+
+        jCheckBox1.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(0, 153, 255));
+        jCheckBox1.setText("Travelling");
+
+        jCheckBox2.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        jCheckBox2.setForeground(new java.awt.Color(0, 153, 255));
+        jCheckBox2.setText("Makan");
+
+        jCheckBox3.setFont(new java.awt.Font("Inter", 0, 12)); // NOI18N
+        jCheckBox3.setForeground(new java.awt.Color(0, 153, 255));
+        jCheckBox3.setText("Gaming");
+        jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox3ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel7.setText("TANGGAL LAHIR");
+
+        txtTanggalLahir.setBackground(new java.awt.Color(102, 102, 102));
+        txtTanggalLahir.setForeground(new java.awt.Color(255, 255, 255));
+        txtTanggalLahir.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
+        txtTanggalLahir.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtTanggalLahirFocusLost(evt);
+            }
+        });
+        txtTanggalLahir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTanggalLahirActionPerformed(evt);
+            }
+        });
+        txtTanggalLahir.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTanggalLahirKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTanggalLahirKeyTyped(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel8.setText("PENDIDIKAN");
+
+        pendidikanComboBox.setBackground(new java.awt.Color(102, 102, 102));
+        pendidikanComboBox.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        pendidikanComboBox.setForeground(new java.awt.Color(255, 255, 255));
+        pendidikanComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SD", "SMP", "SMA", "D1", "D2", "D3", "D4 / S1", "S2", "S3" }));
+        pendidikanComboBox.setSelectedIndex(-1);
+        pendidikanComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                pendidikanComboBoxItemStateChanged(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel9.setText("IPK");
+
+        txtIPK.setBackground(new java.awt.Color(102, 102, 102));
+        txtIPK.setForeground(new java.awt.Color(255, 255, 255));
+        txtIPK.setFont(new java.awt.Font("Inter", 1, 12)); // NOI18N
+        txtIPK.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtIPKFocusLost(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(51, 153, 255));
+        jButton1.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("DAFTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Inter", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 153, 255));
+        jLabel10.setText("NO.TELEPON");
+
+        tlpTxtField.setBackground(new java.awt.Color(102, 102, 102));
+        tlpTxtField.setFont(new java.awt.Font("Inter Black", 0, 12)); // NOI18N
+        tlpTxtField.setForeground(new java.awt.Color(255, 255, 255));
+        tlpTxtField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tlpTxtFieldActionPerformed(evt);
+            }
+        });
+        tlpTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                tlpTxtFieldKeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jCheckBox1)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jCheckBox3)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jCheckBox2)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtTanggalLahir)
+                                    .addComponent(jLabel8)
+                                    .addComponent(pendidikanComboBox, 0, 151, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel9)
+                                    .addComponent(txtIPK, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tlpTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel10)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jRadioButton1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButton2))
+                            .addComponent(jSeparator2)))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                            .addGap(32, 32, 32)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel2)
+                                .addComponent(nikTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel4))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(namaTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3)))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(alamatTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(26, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(106, 106, 106))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(115, 115, 115))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addGap(36, 36, 36)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nikTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(namaTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(alamatTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jRadioButton1)
+                    .addComponent(jRadioButton2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jCheckBox2))
+                .addGap(7, 7, 7)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtTanggalLahir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtIPK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pendidikanComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tlpTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(34, 34, 34))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(39, 39, 39))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 434, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    private void nikTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nikTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nikTxtFieldActionPerformed
 
+    private void namaTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_namaTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_namaTxtFieldActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox3ActionPerformed
+
+    private void txtTanggalLahirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTanggalLahirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTanggalLahirActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling c ode here:
+    JOptionPane.showMessageDialog(null, "Anda Berhasil Mendaftar");
+            // Hapus isi textfield
+    nikTxtField.setText("");
+    namaTxtField.setText("");
+    alamatTxtField.setText("");
+    tlpTxtField.setText("");
+    
+    // Hapus isi formatted textfield
+    txtIPK.setValue("");
+    txtTanggalLahir.setValue("");
+    
+    // Reset combobox ke index pertama
+    pendidikanComboBox.setSelectedIndex(-1);
+    
+    // Hapus seleksi radio button
+    buttonGroup1.clearSelection();
+    
+    // Hapus centang checkbox
+    jCheckBox1.setSelected(false);
+    jCheckBox2.setSelected(false);
+    jCheckBox3.setSelected(false);
+    
+    // Radio button juga di-unselect (meskipun sudah ada buttonGroup.clearSelection())
+    jRadioButton1.setSelected(false);
+    jRadioButton2.setSelected(false);
+    
+    // Fokus kembali ke field pertama (biasanya nama/field pertama yang diisi)
+    nikTxtField.requestFocus();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtTanggalLahirKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTanggalLahirKeyTyped
+        
+    }//GEN-LAST:event_txtTanggalLahirKeyTyped
+
+    private void txtTanggalLahirKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTanggalLahirKeyReleased
+ 
+    }//GEN-LAST:event_txtTanggalLahirKeyReleased
+
+    private void txtTanggalLahirFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtTanggalLahirFocusLost
+        // TODO add your handling code here:
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+    dateFormat.setLenient(false); // Pastikan format tanggal harus valid
+    
+    try {
+        // Ambil tanggal dari input field
+        String inputDate = txtTanggalLahir.getText().trim();
+        
+        // Cek apakah input kosong
+        if (inputDate.isEmpty()) return; // Jika kosong, tidak perlu validasi
+        
+        // Validasi format tanggal menggunakan regex
+        if (!inputDate.matches("\\d{2}-\\d{2}-\\d{4}")) {
+            JOptionPane.showMessageDialog(this, "Format tanggal harus dd-MM-yyyy.", "Input Tidak Valid", JOptionPane.ERROR_MESSAGE);
+            txtTanggalLahir.setText(""); // Kosongkan input jika format tidak valid
+            return;
+        }
+        
+        // Konversi string input menjadi tanggal
+        Date birthDate = dateFormat.parse(inputDate);
+        
+        // Tentukan batas usia 18 tahun ke belakang dari hari ini
+        Date today = new Date();
+        long age18YearsAgo = today.getTime() - (18L * 365 * 24 * 60 * 60 * 1000);
+        Date minDate = new Date(age18YearsAgo);
+        
+        // Validasi apakah tanggal lahir lebih besar dari batas tanggal
+        if (birthDate.after(minDate)) {
+            // Jika usia kurang dari 18 tahun, tampilkan pesan kesalahan dan hapus input
+            JOptionPane.showMessageDialog(this, "Usia minimal adalah 18 tahun.", "Input Tidak Valid", JOptionPane.ERROR_MESSAGE);
+            txtTanggalLahir.setText(""); // Kosongkan input
+        }
+    } catch (ParseException e) {
+        // Jika format tanggal tidak valid
+        JOptionPane.showMessageDialog(this, "Tanggal tidak valid. Pastikan sesuai format dd-MM-yyyy.", "Input Tidak Valid", JOptionPane.ERROR_MESSAGE);
+        txtTanggalLahir.setText(""); // Kosongkan input
+    }
+    }//GEN-LAST:event_txtTanggalLahirFocusLost
+
+    private void txtIPKFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtIPKFocusLost
+        // TODO add your handling code here:
+        try {
+        // Ambil nilai IPK dari input field dan konversi menjadi angka desimal
+        String inputIPK = txtIPK.getText().trim();
+        if (inputIPK.isEmpty()) return; // Jika kosong, tidak perlu validasi
+        
+        // Konversi string IPK ke tipe desimal
+        double ipk = Double.parseDouble(inputIPK.replace(",", "."));
+        
+        // Validasi rentang IPK (0.00 sampai 4.00)
+        if (ipk < 0.00 || ipk > 4.00) {
+            // Jika IPK tidak dalam rentang yang valid, tampilkan pesan dan kosongkan input
+            JOptionPane.showMessageDialog(this, "IPK tidak valid. Harus antara 0,00 sampai 4,00.", "Input Tidak Valid", JOptionPane.ERROR_MESSAGE);
+            txtIPK.setText(""); // Kosongkan input
+        }
+    } catch (NumberFormatException e) {
+        // Jika format IPK tidak valid (misalnya terdapat karakter yang bukan angka)
+        JOptionPane.showMessageDialog(this, "Format IPK tidak valid. Gunakan format desimal dengan koma (0,00).", "Input Tidak Valid", JOptionPane.ERROR_MESSAGE);
+        txtIPK.setText(""); // Kosongkan input
+    }
+    }//GEN-LAST:event_txtIPKFocusLost
+
+    private void tlpTxtFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tlpTxtFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tlpTxtFieldActionPerformed
+
+    private void tlpTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tlpTxtFieldKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+    
+    // Cek apakah karakter yang diketik bukan angka
+    if (!Character.isDigit(c)) {
+        // Jika bukan angka, batalkan event
+        evt.consume();
+    }
+    }//GEN-LAST:event_tlpTxtFieldKeyTyped
+
+    private void pendidikanComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pendidikanComboBoxItemStateChanged
+        // TODO add your handling code here:
+         if (evt.getStateChange() == ItemEvent.SELECTED) {
+        String selectedItem = (String) pendidikanComboBox.getSelectedItem();
+   
+        // Periksa apakah item yang dipilih adalah item yang tidak diinginkan
+        if ("SD".equals(selectedItem) || "SMP".equals(selectedItem) || "SMA".equals(selectedItem)) {
+            // Tampilkan pesan error
+            JOptionPane.showMessageDialog(this, "Pendidikan minimal D1", "Peringatan", JOptionPane.WARNING_MESSAGE);
+            
+            
+            // Mengembalikan pilihan ke item sebelumnya atau yang pertama
+            pendidikanComboBox.setSelectedIndex(-1); // Kembali ke item pertama atau bisa disesuaikan
+        }
+    }
+    }//GEN-LAST:event_pendidikanComboBoxItemStateChanged
+
+
+   
     /**
      * @param args the command line arguments
      */
@@ -75,7 +571,36 @@ public class BioKuis2_Leon extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField alamatTxtField;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JTextField namaTxtField;
+    private javax.swing.JTextField nikTxtField;
+    private javax.swing.JComboBox<String> pendidikanComboBox;
+    private javax.swing.JTextField tlpTxtField;
+    private javax.swing.JFormattedTextField txtIPK;
+    private javax.swing.JFormattedTextField txtTanggalLahir;
     // End of variables declaration//GEN-END:variables
 }
